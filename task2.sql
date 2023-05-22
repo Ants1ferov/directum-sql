@@ -11,9 +11,9 @@ group by prod.Name
 order by prod.Name
 
 select
-	prod.Name [Наименование продукции],
-	sel.Surname [Фамилия],
-	sel.Name [Имя],
+	prod.Name [РќР°РёРјРµРЅРѕРІР°РЅРёРµ РїСЂРѕРґСѓРєС†РёРё],
+	sel.Surname [Р¤Р°РјРёР»РёСЏ],
+	sel.Name [РРјСЏ],
 	SUM(sal.Quantity) / (select qs.QualtitySales from #QuantitySales qs
 		where qs.ProductName = prod.Name) * 100
 from Sales sal
